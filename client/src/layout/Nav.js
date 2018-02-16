@@ -15,7 +15,7 @@ class Nav extends Component {
     else {
       links = (
         <span>
-          
+
           <Link to="/login">Login</Link>
           <Link to="/signup">Sign Up</Link>
         </span>);
@@ -24,7 +24,7 @@ class Nav extends Component {
     return(
         <div>
           <nav className="nav">
-            <a href="/">Home</a>
+            <a href="/" className="title2">E  A  S  E  L</a>
             <a href="/photos">Photos</a>
 
             {links}

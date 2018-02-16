@@ -62,9 +62,18 @@ class Profile extends Component {
 	}
 
 
+  // handleSubmit = (date, content) => {
+  //     let base = this;
+  //     console.log('base:', base);
+  //     // base.setState({display: 'loading'});
+
+
   handleSubmit = (date, content) => {
       let base = this;
       console.log('base:', base);
+      // base.setState({display: 'loading'});
+
+
 
       // base.setState({display: 'loading'});
   //     axios.post('/profile/upload', {
@@ -84,7 +93,36 @@ class Profile extends Component {
   //     });
 
 
+  //   }
+
     }
+
+
+
+  // handleFavoritePost = (e) => {
+  //   e.preventDefault();
+  //   console.log('POST button')
+  //   axios.post('/profile/favorite/', {
+  //   //   email: this.state.email,
+  //   //   password: this.state.password
+  //   }).then((result) => {
+  //   }).catch((error) => {
+  //     console.log('error returned', error.response.data);
+  //   });
+  // }
+
+  // handleFavoriteDelete = (e) => {
+  //   e.preventDefault();
+  //   console.log('DELETE button')
+  //   axios.delete('/profile/favorite/', {
+  //   //   email: this.state.email,
+  //   //   password: this.state.password
+  //   }).then((result) => {
+  //   }).catch((error) => {
+  //     console.log('error returned', error.response.data);
+  //   });
+  // }
+
 
 
   render(){
@@ -114,7 +152,58 @@ class Profile extends Component {
           {display}
           <h4>Your email is {this.props.user.email}</h4>
 
-          <FileUpload user={this.props.user} />
+
+          {/* <form action={this.handleSubmit} enctype="multipart/form-data"> */}
+          {/* <form method="POST" action="/profile/upload" enctype="multipart/form-data"> */}
+            {/* <label>
+                Upload Photo:
+              <input type="file" name="myFile" />
+            </label>
+
+            {/* <RaisedButton primary={true} label="Choose an Image">
+              <input type="file" name="myFile" />
+            </RaisedButton> */}
+
+            {/* <RaisedButton
+              label="Submit"
+              primary={false}
+              onClick={this.handleSubmit}
+            />  */}
+
+
+            <RaisedButton
+              label="Submit"
+              primary={false}
+              onClick={this.handleSubmit}
+            />
+            {/* <input type="submit" value="Submit" /> */}
+          {/* </form> */}
+
+
+          {/* <RaisedButton
+            label="Favorite - POST"
+            primary={true}
+            onClick={this.handleFavoritePost}
+          />
+
+
+          <RaisedButton
+            label="Favorite - DELETE"
+            primary={true}
+            onClick={this.handleFavoriteDelete}
+          /> */}
+
+
+
+          {/* <ModalUpload /> */}
+
+          {/* <RaisedButton
+            label="Upload - POST"
+            primary={true}
+            onClick={this.handleUploadPost}
+            // onClick={this.uploadWidget}
+          /> */}
+
 
 
         </div>
