@@ -17,6 +17,7 @@ class Photos extends Component {
           <Photo />
           <Photo />
           <Photo />
+          <Photo />
         </div>
       </div>
     );
