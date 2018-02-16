@@ -7,7 +7,6 @@ import ModalUpload from './layout/ModalUpload.js'
 import RaisedButton from 'material-ui/RaisedButton';
 // import UploadFile from './testFile/UploadFile.js';
 
-
 import FileUpload from './testComponent/FileUpload.js';
 
 // const cloudinaryCore = new cloudinary.Cloudinary({cloud_name: 'demo'});
@@ -19,20 +18,35 @@ class Profile extends Component {
     super(props);
     this.state = {
 			file: '',
-			
+
     }
+<<<<<<< HEAD
+=======
+
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+>>>>>>> 4376e2aa77cd43a11b9b6983c85b1a8161c40085
   }
 
   //   this.handleSubmit = this.handleSubmit.bind(this);
   // }
 
 
+<<<<<<< HEAD
   // handleSubmit = (date, content) => {
   //     let base = this;
   //     console.log('base:', base);
   //     // base.setState({display: 'loading'});
   
     
+=======
+  handleSubmit = (date, content) => {
+      let base = this;
+      console.log('base:', base);
+      // base.setState({display: 'loading'});
+
+
+>>>>>>> 4376e2aa77cd43a11b9b6983c85b1a8161c40085
 
   //     axios.post('/profile/upload', {
   //       // file: myFile,
@@ -50,8 +64,13 @@ class Profile extends Component {
   //       console.log('Post error:', error.response.data);
   //     });
 
+<<<<<<< HEAD
    
   //   }
+=======
+
+    }
+>>>>>>> 4376e2aa77cd43a11b9b6983c85b1a8161c40085
 
 
 
@@ -79,7 +98,7 @@ class Profile extends Component {
   //   });
   // }
 
-  
+
 
 
   // handleUploadPost = (e) => {
@@ -125,6 +144,7 @@ class Profile extends Component {
             {/* <RaisedButton primary={true} label="Choose an Image">
               <input type="file" name="myFile" />
             </RaisedButton> */}
+<<<<<<< HEAD
            
             {/* <RaisedButton
               label="Submit"
@@ -132,44 +152,51 @@ class Profile extends Component {
               onClick={this.handleSubmit}
             />  */}
 
+=======
+
+            <RaisedButton
+              label="Submit"
+              primary={false}
+              onClick={this.handleSubmit}
+            />
+>>>>>>> 4376e2aa77cd43a11b9b6983c85b1a8161c40085
             {/* <input type="submit" value="Submit" /> */}
           {/* </form> */}
 
 
-          {/* <RaisedButton 
-            label="Favorite - POST" 
+          {/* <RaisedButton
+            label="Favorite - POST"
             primary={true}
-            onClick={this.handleFavoritePost} 
+            onClick={this.handleFavoritePost}
           />
 
 
-          <RaisedButton 
-            label="Favorite - DELETE" 
+          <RaisedButton
+            label="Favorite - DELETE"
             primary={true}
-            onClick={this.handleFavoriteDelete} 
+            onClick={this.handleFavoriteDelete}
           /> */}
 
     
 
           {/* <ModalUpload /> */}
 
-          {/* <RaisedButton 
-            label="Upload - POST" 
+          {/* <RaisedButton
+            label="Upload - POST"
             primary={true}
-            onClick={this.handleUploadPost} 
-            // onClick={this.uploadWidget} 
+            onClick={this.handleUploadPost}
+            // onClick={this.uploadWidget}
           /> */}
 
-          
 
-          {/* <RaisedButton 
-            label="Upload - DELETE" 
+
+          {/* <RaisedButton
+            label="Upload - DELETE"
             primary={true}
-            onClick={this.handleUploadDelete} 
+            onClick={this.handleUploadDelete}
           /> */}
           <FileUpload user={this.props.user} />
         </div>
-
       );
     }
     else {
