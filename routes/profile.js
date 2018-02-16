@@ -21,7 +21,17 @@ var User = require('../models/user');
 var Picture = require('../models/picture');
 
 
-
+//GET ROUTE
+router.get('/', function(req, res){
+    console.log('get trigger');
+	Picture.find({ user_id: req.query.user }, function(err, picture){
+		if(err){
+			console.log(err);
+        }
+        // console.log(picture);
+		res.send(picture);
+	});
+});
 
 // USER FAVORITES ROUTES
 // POST ROUTE

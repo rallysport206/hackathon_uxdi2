@@ -17,7 +17,7 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      user: {}
+      user: {},
     }
   }
   componentDidMount = () => {
@@ -56,6 +56,34 @@ class App extends Component {
     }
   }
 
+  fetchPictures = () => {
+    let userId= this.props.user.id;
+    console.log('userId', userId);
+
+		// let base = this;	
+		axios({
+			method: 'get',
+			url: '/profile',
+			params: {
+				user: userId
+			}
+		}).then((result) => {
+      // console.log(result.data);
+			// let rawData = result.data.concat([result]);
+			// let foundDreams = sortbyDate(rawData);
+			this.setState({
+				pictureData: result.data,
+			// 	dreamState: true
+			}, () => {
+        console.log("State: ", this.state.pictureData);
+      });
+			
+		}).catch((error) => {
+			console.log("An error occured", error.response.data);
+		});
+	}
+
+
   setFlash = (t, msg) => {
     this.setState({
       flash: msg,
@@ -85,7 +113,7 @@ class App extends Component {
                   () => (<Photos user={this.state.user} setFlash={this.setFlash} />)} />
 
                 <Route path="/profile" component={
-                  () => (<Profile user={this.state.user} setFlash={this.setFlash} />)} />
+                  () => (<Profile user={this.state.user} setFlash={this.setFlash} pictureData={this.state.pictureData} />)} />
 
                 {/* AUTH   */}
                 <Route path="/login" component={
