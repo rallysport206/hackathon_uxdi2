@@ -6,6 +6,7 @@ var mongoose = require('mongoose');
 //allows file uploads 
 var multer = require('multer');
 var upload = multer({dest: "./uploads"});
+// import fileUploadMiddleware from './fileUploadMiddleware';
 
 // CLOUDINARY STUFF
 var cloudinary = require('cloudinary');
@@ -33,26 +34,34 @@ router.delete('/favorite', function(req, res, next){
     console.log('favorite DELETE route reached!');
 });
 
+
+
+
+
+
+
+
 // USER UPLOAD ROUTES
 // POST ROUTE
-router.post('/upload', upload.single('myFile'), function(req, res, next){
-    let user = req.body.user;
-    console.log('req.body', req.body)
-    console.log('user', user)
+router.post('/upload', upload.single('file'), function(req, res, next){
+    // let user = req.body.user;
     // CLOUDINARY UPLOAD
     cloudinary.uploader.upload(req.file.path, function(result) { 
-        let etag = result.etag;
-        let url = result.url;
+        // let etag = result.etag;
+        // let url = result.url;
     });
 
-    // let postData = {
-    //     user_id: user.id,
-    //     date: req.body.date,
-    //     cloudinary_etag: etag,
-    //     cloudinary_url: url,
-    //     likes: 0,
-    //     winner: false
-    // }
+    let postData = {
+        // user_id: user.id,
+        user_id: 122,
+        // date: req.body.date,
+        // cloudinary_etag: etag,
+        // cloudinary_url: url,
+        likes: 11,
+        winner: false
+    }
+
+    console.log(postData);
 
     Picture.create(postData, function (err, picture) {
         if(err){
