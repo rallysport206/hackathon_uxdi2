@@ -11,7 +11,10 @@ class Photos extends Component {
 
     return (
       <div className="photo__section">
-        <img className="photo" src="https://i.imgur.com/KkulPF4.jpg" alt=""/>
+        <div>
+          <img className="photo" src="https://i.imgur.com/KkulPF4.jpg" alt=""/>
+        </div>
+        
         <img className="photo" src="https://i.imgur.com/KYYzaWt.jpg" alt=""/>
         <img className="photo" src="https://i.imgur.com/js3ARRJ.jpg" alt=""/>
         <img className="photo" src="https://images.unsplash.com/photo-1494488450280-5bb40b163f8f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=749dccf390bea8cbc246e1112e3ea80a&auto=format&fit=crop&w=2234&q=80" alt=""/>
