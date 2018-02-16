@@ -21,37 +21,37 @@ class Profile extends Component {
 			file: '',
 			
     }
-    
-
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  //   this.handleSubmit = this.handleSubmit.bind(this);
+  // }
 
-  handleSubmit = (date, content) => {
-      let base = this;
-      console.log('base:', base);
-      // base.setState({display: 'loading'});
+
+  // handleSubmit = (date, content) => {
+  //     let base = this;
+  //     console.log('base:', base);
+  //     // base.setState({display: 'loading'});
   
     
 
-      axios.post('/profile/upload', {
-        // file: myFile,
-        file: 'testfile',
-        // user: base.props.user
-      }).then((result) => {
-        console.log('Post results', result);
-        // base.setState({
-        //   date: date,
-        //   content: content,
-        //   data: result,
-        //   display: 'result'
-        // })
-      }).catch((error) => {
-        console.log('Post error:', error.response.data);
-      });
+  //     axios.post('/profile/upload', {
+  //       // file: myFile,
+  //       file: 'testfile',
+  //       // user: base.props.user
+  //     }).then((result) => {
+  //       console.log('Post results', result);
+  //       // base.setState({
+  //       //   date: date,
+  //       //   content: content,
+  //       //   data: result,
+  //       //   display: 'result'
+  //       // })
+  //     }).catch((error) => {
+  //       console.log('Post error:', error.response.data);
+  //     });
 
    
-    }
+  //   }
 
 
 
@@ -117,7 +117,7 @@ class Profile extends Component {
 
           {/* <form action={this.handleSubmit} enctype="multipart/form-data"> */}
           {/* <form method="POST" action="/profile/upload" enctype="multipart/form-data"> */}
-            <label>
+            {/* <label>
                 Upload Photo:
               <input type="file" name="myFile" />
             </label>
@@ -126,11 +126,11 @@ class Profile extends Component {
               <input type="file" name="myFile" />
             </RaisedButton> */}
            
-            <RaisedButton
+            {/* <RaisedButton
               label="Submit"
               primary={false}
               onClick={this.handleSubmit}
-            />
+            />  */}
 
             {/* <input type="submit" value="Submit" /> */}
           {/* </form> */}
@@ -149,7 +149,7 @@ class Profile extends Component {
             onClick={this.handleFavoriteDelete} 
           /> */}
 
-          <br/>
+    
 
           {/* <ModalUpload /> */}
 
@@ -167,7 +167,7 @@ class Profile extends Component {
             primary={true}
             onClick={this.handleUploadDelete} 
           /> */}
-          <FileUpload />
+          <FileUpload user={this.props.user} />
         </div>
 
       );
