@@ -1,0 +1,88 @@
+.profile__main {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.profile__head {
+    display: flex;
+
+}
+
+.profile__user--photo {
+    height: 239px;
+    width: 239px;
+    border-radius: 25px;
+}
+
+.profile__user--name{
+    font-size: 36px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+
+}
+
+
+.profile__row--link--name {
+
+    border-bottom: 6px solid white; 
+}
+.profile__row--link--posts {
+    border-top: 6px solid white; 
+    border-left: 6px solid white;
+}
+
+.profile__row--link--votes {
+    border-top: 6px solid white;
+    
+}
+
+.profile__user--username {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+}
+
+.profile__user--info {
+    display: flex;
+    flex-direction: column;
+}
+
+p.profile__user--name {
+    
+}
+
+a > .profile__user--link {
+    font-size: 20px;
+    font-color: #eee;
+}
+
+a {
+    text-decoration: none;
+    color: #eee;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+}
+.profile__photos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile__row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.profile__row--link {
+    width: 420px;
+    height: 60px;
+}
+
+.photo__card > img{
+    background-color: #eee;
+    /* width: 32%; */
+    width: 420px;
+    height: 292px;
+    background-size: cover;
+	background-position: center top; 
+    margin: 3px;
+}
