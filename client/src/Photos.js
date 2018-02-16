@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
 class Photos extends Component {
-  render(){ 
+  render(){
 
     const Photo = function(props) {
       return(
         <div className="photo"></div>
-      ) 
+      )
     };
 
     return (
