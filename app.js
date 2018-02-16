@@ -6,6 +6,8 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var app = express();
 
+
+
 // Mongoose stuff
 var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/hackathon_uxdi', {useMongoClient: true});

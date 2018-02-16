@@ -1,14 +1,25 @@
 import React, { Component } from 'react';
 
 class Photos extends Component {
-  render(){
+  render(){ 
+
+    const Photo = function(props) {
+      return(
+        <div className="photo"></div>
+      ) 
+    };
+
     return (
-    <div>
+      <div>
         <h2>Photos Page</h2>
 
-        
-    </div>);
-
+        <div className="photo__section">
+          <Photo />
+          <Photo />
+          <Photo />
+        </div>
+      </div>
+    );
   }
 }
 

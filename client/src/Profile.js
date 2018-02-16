@@ -1,9 +1,33 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+// import {Image, Video, Transformation, CloudinaryContext} from 'cloudinary-react';
+import cloudinary from 'cloudinary-core';
+import ModalUpload from './layout/ModalUpload.js'
 // MATERIAL UI
 import RaisedButton from 'material-ui/RaisedButton';
 
+
+// const cloudinaryCore = new cloudinary.Cloudinary({cloud_name: 'demo'});
+<script src="//widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+
 class Profile extends Component {
+
+  constructor(props) {
+    super(props);
+    
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('this:', this);
+    axios.post('/profile/upload', {
+
+    })
+  }
+
+
 
   handleFavoritePost = (e) => {
     e.preventDefault();
@@ -29,9 +53,13 @@ class Profile extends Component {
     });
   }
 
+  
+
+
   handleUploadPost = (e) => {
     e.preventDefault();
     console.log('POST button')
+
     axios.post('/profile/upload/', {
     //   email: this.state.email,
     //   password: this.state.password
@@ -60,6 +88,16 @@ class Profile extends Component {
           <h2>HELLO AGAIN {this.props.user.name}!</h2>
           <h4>Your email is {this.props.user.email}</h4>
 
+
+          <form method="POST" action="/profile/upload" enctype="multipart/form-data">
+            <label>
+                Upload Photo:
+              <input type="file" name="myFile" />
+            </label>
+            <input type="submit" value="Submit" />
+          </form>
+
+
           <RaisedButton 
             label="Favorite - POST" 
             primary={true}
@@ -75,11 +113,16 @@ class Profile extends Component {
 
           <br/>
 
+          {/* <ModalUpload /> */}
+
           <RaisedButton 
             label="Upload - POST" 
             primary={true}
             onClick={this.handleUploadPost} 
+            // onClick={this.uploadWidget} 
           />
+
+          
 
           <RaisedButton 
             label="Upload - DELETE" 
@@ -88,6 +131,7 @@ class Profile extends Component {
           />
 
         </div>
+
       );
     }
     else {

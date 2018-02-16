@@ -13,7 +13,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #7f4dd2;
+  /* color: #7f4dd2; */
 }
 
 .footer {
@@ -33,17 +33,6 @@ nav a:hover {
   margin: 15px 0;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: #11f;
-  border-radius: 2px;
-  border: none;
-  padding: 3px;
-}
-
-.btn-primary:hover {
-  background-color: #77f;
-}
 
 .error {
   background-color: pink;
@@ -79,32 +68,14 @@ nav a:hover {
   float: right;
 }
 
-/* DEFAULT STYLES FROM CREATE REACT APP MODULE */
-.App {
-  text-align: center;
+
+/* --------------- PHOTO SECTION --------------- */
+
+.photo {
+  background-image: url('https://www.fillmurray.com/460/300');
+  height: 300px;
+  width: 460px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+/* --------------- PROFILE SECTION --------------- */
