@@ -7,8 +7,11 @@ import Footer from './layout/Footer.js';
 import Home from './Home.js';
 import Nav from './layout/Nav.js';
 import Login from './auth/Login.js';
+import Photos from './Photos.js';
 import Profile from './Profile.js';
 import Signup from './auth/Signup.js';
+
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 class App extends Component {
   constructor(props){
@@ -70,22 +73,30 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Router>
-          <div>
-            <Nav user={this.state.user} updateUser={this.getUser} />
-            <div className="space">
-              <Flash flashType={this.state.flashType} flash={this.state.flash} setFlash={this.setFlash} cancelFlash={this.cancelFlash} />
-              <Route exact path="/" component={Home} />
-              <Route path="/login" component={
-                () => (<Login user={this.state.user} setFlash={this.setFlash} updateUser={this.getUser} />)} />
-              <Route path="/signup" component={
-                () => (<Signup user={this.state.user} setFlash={this.setFlash} updateUser={this.getUser} />)} />
-              <Route path="/profile" component={
-                () => (<Profile user={this.state.user} setFlash={this.setFlash} />)} />
+        <MuiThemeProvider>
+          <Router>
+            <div>
+              <Nav user={this.state.user} updateUser={this.getUser} />
+              <div className="space">
+                <Flash flashType={this.state.flashType} flash={this.state.flash} setFlash={this.setFlash} cancelFlash={this.cancelFlash} />
+                <Route exact path="/" component={Home} />
+
+                <Route path="/photos" component={
+                  () => (<Photos user={this.state.user} setFlash={this.setFlash} />)} />
+
+                <Route path="/profile" component={
+                  () => (<Profile user={this.state.user} setFlash={this.setFlash} />)} />
+
+                {/* AUTH   */}
+                <Route path="/login" component={
+                  () => (<Login user={this.state.user} setFlash={this.setFlash} updateUser={this.getUser} />)} />
+                <Route path="/signup" component={
+                  () => (<Signup user={this.state.user} setFlash={this.setFlash} updateUser={this.getUser} />)} />
+              </div>
             </div>
-          </div>
-        </Router>
-        <Footer />
+          </Router>
+          <Footer />
+        </MuiThemeProvider>
       </div>
     );
   }
