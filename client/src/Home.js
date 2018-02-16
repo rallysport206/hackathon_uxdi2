@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import FlatButton from 'material-ui/FlatButton';
 
 // class Home extends Component {
 //   render(){
@@ -21,8 +22,16 @@ class Home extends Component {
         <h1 className="discover">VOTE, BE FOUND.</h1>
 
         <div className="login-box">
-          <Link to="/photos"><button className="primaryCTA">DISCOVER</button></Link>
-          <Link to="/signup"><button className="secondaryCTA">Log In</button></Link>
+          <Link to="/photos">
+            <FlatButton
+            backgroundColor="#009688"
+            label="DISCOVER" />
+          </Link>
+          <Link to="/signup">
+            <FlatButton
+            backgroundColor="#FAFAFA"
+            label="Log In" />
+          </Link>
         </div>
       </div>
     );

@@ -20,33 +20,26 @@ class Profile extends Component {
 			file: '',
 
     }
-<<<<<<< HEAD
-=======
-
 
     this.handleSubmit = this.handleSubmit.bind(this);
->>>>>>> 4376e2aa77cd43a11b9b6983c85b1a8161c40085
   }
 
   //   this.handleSubmit = this.handleSubmit.bind(this);
   // }
 
 
-<<<<<<< HEAD
   // handleSubmit = (date, content) => {
   //     let base = this;
   //     console.log('base:', base);
   //     // base.setState({display: 'loading'});
-  
-    
-=======
+
+
   handleSubmit = (date, content) => {
       let base = this;
       console.log('base:', base);
       // base.setState({display: 'loading'});
 
 
->>>>>>> 4376e2aa77cd43a11b9b6983c85b1a8161c40085
 
   //     axios.post('/profile/upload', {
   //       // file: myFile,
@@ -64,13 +57,10 @@ class Profile extends Component {
   //       console.log('Post error:', error.response.data);
   //     });
 
-<<<<<<< HEAD
-   
+
   //   }
-=======
 
     }
->>>>>>> 4376e2aa77cd43a11b9b6983c85b1a8161c40085
 
 
 
@@ -144,22 +134,19 @@ class Profile extends Component {
             {/* <RaisedButton primary={true} label="Choose an Image">
               <input type="file" name="myFile" />
             </RaisedButton> */}
-<<<<<<< HEAD
-           
+
             {/* <RaisedButton
               label="Submit"
               primary={false}
               onClick={this.handleSubmit}
             />  */}
 
-=======
 
             <RaisedButton
               label="Submit"
               primary={false}
               onClick={this.handleSubmit}
             />
->>>>>>> 4376e2aa77cd43a11b9b6983c85b1a8161c40085
             {/* <input type="submit" value="Submit" /> */}
           {/* </form> */}
 
@@ -177,7 +164,7 @@ class Profile extends Component {
             onClick={this.handleFavoriteDelete}
           /> */}
 
-    
+
 
           {/* <ModalUpload /> */}
 
