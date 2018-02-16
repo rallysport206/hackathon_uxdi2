@@ -84,28 +84,35 @@ nav a:hover {
   background-size: cover;
   font-family: 'Abril Fatface', cursive;
   color: white;
-  margin: 100px, 0,0,0;
-
+  display: block;
 }
-.title{
+.home img{
+  width: 380px;
+}
+.home-text{
+  float: right;
+  clear: right;
+}
+/*.title{
   font-family: 'Abril Fatface', cursive;
   font-size: 80px;
   color: white;
-}
+}*/
 FlatButton{
   margin: 15px;
 }
 /* --------------- PHOTO SECTION --------------- */
 
 .photo {
-  background-image: url('https://www.fillmurray.com/460/300');
+  background-image: url('https://i.imgur.com/KkulPF4.jpg');
   height: 292px;
   width: 420px;
   display: inline-block;
-  margin: 15px;
+  margin: 5px;
 }
 
 .photo__section{
+  text-align: center;
   width: 100%;
 }
 

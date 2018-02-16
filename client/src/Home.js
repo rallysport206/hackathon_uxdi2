@@ -16,22 +16,23 @@ class Home extends Component {
   render(){
     return (
       <div className="home">
-        <p className="title">E  A  S  E  L</p>
+        <img className="" src="https://i.imgur.com/tBTOdjb.png" alt=""/>
+        <div className="text-home">
+          <h1 className="discover">DISCOVER,</h1>
+          <h1 className="discover">VOTE, BE FOUND.</h1>
 
-        <h1 className="discover">DISCOVER,</h1>
-        <h1 className="discover">VOTE, BE FOUND.</h1>
-
-        <div className="login-box">
-          <Link to="/photos">
-            <FlatButton
-            backgroundColor="#009688"
-            label="DISCOVER" />
-          </Link>
-          <Link to="/signup">
-            <FlatButton
-            backgroundColor="#FAFAFA"
-            label="Log In" />
-          </Link>
+          <div className="login-box">
+            <Link to="/photos">
+              <FlatButton
+              backgroundColor="#009688"
+              label="DISCOVER" />
+            </Link>
+            <Link to="/signup">
+              <FlatButton
+              backgroundColor="#FAFAFA"
+              label="Log In" />
+            </Link>
+          </div>
         </div>
       </div>
     );
