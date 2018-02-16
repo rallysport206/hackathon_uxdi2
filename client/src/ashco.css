@@ -9,10 +9,17 @@
 
 }
 
+.photo_profile--box {
+    width: 420px;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .profile__user--photo {
+    margin: 24px;
     height: 239px;
     width: 239px;
-    border-radius: 25px;
+    border-radius: 50%;
 }
 
 .profile__user--name{
@@ -25,15 +32,15 @@
 
 .profile__row--link--name {
 
-    border-bottom: 6px solid white; 
+    border-bottom: 3px solid white; 
 }
 .profile__row--link--posts {
-    border-top: 6px solid white; 
-    border-left: 6px solid white;
+    border-top: 3px solid white; 
+    border-left: 3px solid white;
 }
 
 .profile__row--link--votes {
-    border-top: 6px solid white;
+    border-top: 3px solid white;
     
 }
 
@@ -45,6 +52,7 @@
 .profile__user--info {
     display: flex;
     flex-direction: column;
+    margin-left: 16px;
 }
 
 p.profile__user--name {
@@ -75,6 +83,7 @@ a {
 .profile__row--link {
     width: 420px;
     height: 60px;
+    margin: 0;
 }
 
 .photo__card > img{

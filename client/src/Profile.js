@@ -68,10 +68,11 @@ class Profile extends Component {
       return (
         <div className="profile__main">
           <div className="profile__head">
-            <div className="profile__user--photo ">
-              <img src="https://slack-imgs.com/?c=1&url=https%3A%2F%2Fi.imgur.com%2FjM7cOrx.jp" />
-              {/* <img src="http://www.qygjxz.com/data/out/190/6179593-profile-pics.jpg" /> */}
-              
+          <div className="photo_profile--box">
+              {/* <div className="profile__user--photo "> */}
+                <img className="profile__user--photo" src="https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAj_AAAAJGY5ZWM2NTQ0LWMwODktNDRmNy05MjdkLWIyNzEwNjkzMTA1Yw.jpg" />
+                {/* <img src="http://www.qygjxz.com/data/out/190/6179593-profile-pics.jpg" /> */}
+              {/* </div> */}
             </div>
             <div className="profile__user--info">
               <h2 className="profile__user--username">{this.props.user.name}</h2>
@@ -79,7 +80,7 @@ class Profile extends Component {
             </div>
           </div>
           <div className="profile__row">
-            <div className="profile__row--link"><p className="profile__user--name">John Clem</p></div>
+            <div className="profile__row--link profile__row--link--name"><p className="profile__user--name">John Clem</p></div>
             <div className="profile__row--link profile__row--link--posts"><a href="#" className="profile__user--posts">Posts</a></div>
             <div className="profile__row--link profile__row--link--votes"><a href="#" className="profile__user--votes">Votes</a></div>
           </div>
@@ -99,31 +100,31 @@ class Profile extends Component {
             </div>
 
             <div className="photo__card">
-              <img src="https://i.imgur.com/IaJfw4r.jpg" />
+              <img src="https://i.imgur.com/IuEUXxB.jpg" />
             </div>
 
             <div className="photo__card">
-              <img src="https://i.imgur.com/jM7cOrx.jpg" />
+              <img src="https://i.imgur.com/8bZQc8R.jpg" />
             </div>            
             
             <div className="photo__card">
-              <img src="https://i.imgur.com/IaJfw4r.jpg" />
+              <img src="https://i.imgur.com/pkkcpEf.jpg" />
             </div>
 
             <div className="photo__card">
-              <img src="https://i.imgur.com/jM7cOrx.jpg" />
+              <img src="https://i.imgur.com/AClogi4.jpg" />
             </div>
 
             <div className="photo__card">
-              <img src="https://i.imgur.com/IaJfw4r.jpg" />
+              <img src="https://i.imgur.com/0XXZy0J.jpg" />
             </div>
 
             <div className="photo__card">
-              <img src="https://i.imgur.com/jM7cOrx.jpg" />
+              <img src="https://i.imgur.com/ei0RzFn.jpg" />
             </div>            
             
             <div className="photo__card">
-              <img src="https://i.imgur.com/IaJfw4r.jpg" />
+              <img src="https://i.imgur.com/9RIXxOE.jpg" />
             </div>
           </div>
           
