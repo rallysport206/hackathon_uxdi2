@@ -1,3 +1,18 @@
+.home {
+    display: flex;
+    align-items: center;
+    margin: 64px 0 0 164px;
+}
+
+.text-home {
+    margin-top: 164px;
+    margin-left: 100px;
+}
+.winner-photo {
+    height: 500px;
+    width: 900px;
+}
+
 .profile__main {
     display: flex;
     flex-direction: column;
